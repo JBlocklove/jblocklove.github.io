@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Browser tab title and the summary search engines and link previews show -->
+        <title>Jason Blocklove | Electrical and Computer Engineering, NYU</title>
+        <meta name="description" content="My name is Jason Blocklove and I'm a Ph.D. candidate in Electrical and Computer Engineering at NYU, working primarily on hardware security and design automation through the lens of generative AI. On the 2026–27 faculty job market.">
+        <meta property="og:title" content="Jason Blocklove">
+        <meta property="og:description" content="Ph.D. candidate in ECE at NYU. Hardware security and design automation with generative AI. On the 2026–27 faculty job market.">
+        <meta property="og:type" content="profile">
+
+        <!-- The browser-tab icon. Set to a square wave. -->
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1317'/%3E%3Cpath d='M7 44H19V20H33V44H45V20H57' fill='none' stroke='%234FD2EC' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;700&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/site.css">
+
+        <!-- Site settings -->
+        <script>
+        window.SITE = {
+            // Name as it appears in BibTeX, bolded in author lists
+            myName: { first: "Jason", last: "Blocklove" },
+            // "full" shows Jason Blocklove; "initials" shows J. Blocklove (IEEE style)
+            authorStyle: "initials",
+            // Google Scholar profile. The weekly stats update reads your ID from here.
+            scholarUrl: "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
+            // How many news items to show before "Show all news"
+            newsLimit: 5,
+            // Publication filter shown first: "all" or "selected"
+            pubFilter: "all",
+
+            // GitHub. Your pinned repositories are fetched weekly by the GitHub Action.
+            // Until then (or if it can't run), your most-starred repositories load live.
+            // To choose repositories yourself instead, list them: repos: ["owner/name", "owner/other"]
+            github: { user: "JBlocklove", show: 6, repos: [
+                "shailja-thakur/AutoChip", // Replace with JBlocklove fork?
+                "JBlocklove/LLMs-for-EDA-Tutorial",
+                "JBlocklove/CSAW-AI-Hardware-Attack-Challenge-2026",
+                "JBlocklove/NYU_OffRAMPS"
+            ] },
+
+            // The waveform at the top of the page. Papers come from BibTeX, tapeouts
+            // from the Hardware list (data-tapeout), and competition dates from the
+            // Competition table, so only career stages are set manually here
+            // Dates are "YYYY-MM". "short" is used when the full label doesn't fit.
+            trace: {
+                stages: [
+                    { label: "B.S. in Computer Engineering @ RIT", short: "B.S.", from: "2015-08", to: "2019-05" },
+                    { label: "M.S. in Computer Engineering @ RIT", short: "M.S.", from: "2019-05", to: "2020-05" },
+                    { label: "JHU Applied Physics Lab - Hardware Engineer", short: "APL", from: "2020-05", to: "2022-08" },
+                    { label: "Ph.D. Student", short: "Ph.D.", from: "2022-09", to: "2026-08" },
+                    { label: "Ph.D. Candidate", short: "Cand.", from: "2026-08", to: "2027-05" }
+                ],
+                next: "Faculty?",              // hatched "unknown" region after your last stage; "" to hide
+                tapeout: "tapeout",            // signal name for the tapeout row; "" to hide
+                competition: "aha_challenge",     // signal name for the competition row; "" to hide
+                competitionName: "AI Hardware Attack Challenge", // used in tooltips
+                compMonths: [9, 11]            // fallback for rows without data-when (Sept to Nov)
+            }
+        };
+        </script>
+
+        <!-- SEO -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jason Blocklove",
+        "url": "https://jasonblocklove.com",
+        "jobTitle": "Ph.D. Candidate in Electrical and Computer Engineering",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "NYU" },
+        "email": "mailto:jason.blocklove@nyu.edu",
+        "knowsAbout": ["Hardware security", "Electronic design automation", "Generative AI"],
+        "sameAs": [
+        "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
+        "https://orcid.org/0009-0005-5619-4654",
+        "https://github.com/jblocklove"
+        ]
+        }
+        </script>
+
+        <script src="data/scholar.js" defer></script>
+        <script src="data/github.js" defer></script>
+        <script src="assets/site.js" defer></script>
+
+    </head>
+
+    <body>
+        <a class="skip" href="#main">Skip to content</a>
+
+        <div class="layout">
+
+            <!-- ==================== SIDEBAR ==================== -->
+            <header class="sidebar">
+
+                <!-- Portrait photo saved as images/photo.jpg. If it's missing, the space disappears. -->
+                <img class="portrait" src="images/photo.jpg" alt="Portrait of Jason Blocklove" width="240" height="300" onerror="this.remove()">
+
+                <!-- Name, position, institution for header block -->
+                <h1 class="name">Jason Blocklove</h1>
+                <p class="role">Ph.D. Candidate<br>Electrical and Computer Engineering<br>New York University</p>
+
+                <!-- On the market -->
+                <p class="market"><span class="led" aria-hidden="true"></span>On the 2026–27 faculty job market</p>
+
+                <!-- If you remove a section below, remove its link here too -->
+                <nav aria-label="Sections">
+                    <ul class="nav">
+                        <!-- <li><a href="#news">News</a></li> -->
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#code">Code and hardware</a></li>
+                        <li><a href="#competition">Competition</a></li>
+                        <li><a href="#teaching">Teaching and mentoring</a></li>
+                        <!-- <li><a href="#awards">Awards and fellowships</a></li> -->
+                        <li><a href="#talks">Talks and tutorials</a></li>
+                        <li><a href="#press">In the press</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#references">References</a></li>
+                    </ul>
+                </nav>
+
+                <!-- CV at files/cv.pdf -->
+                <a class="cv-button" href="files/cv.pdf">Download CV</a>
+
+                <!-- Application statements -->
+                <!-- <ul class="docs"> -->
+                <!--     <li><a href="files/research-statement.pdf">Research statement</a></li> -->
+                <!--     <li><a href="files/teaching-statement.pdf">Teaching statement</a></li> -->
+                <!-- </ul> -->
+
+                <!-- Contact details -->
+                <address class="contact">
+                    <a href="mailto:jason.blocklove@nyu.edu">jason.blocklove@nyu.edu</a><br>
+                    Department of Electrical and Computer Engineering<br>
+                    New York University
+                </address>
+
+                <!-- Profile links -->
+                <ul class="profiles">
+                    <li><a href="https://scholar.google.com/citations?user=QOd5mRIAAAAJ">Google Scholar</a></li>
+                    <!-- <li><a href="#">DBLP</a></li> -->
+                    <li><a href="https://orcid.org/0009-0005-5619-4654">ORCID</a></li>
+                    <li><a href="https://github.com/JBlocklove">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/jason-blocklove">LinkedIn</a></li>
+                </ul>
+            </header>
+
+
+            <main id="main">
+
+                <!-- ==================== WAVEFORM ==================== -->
+                <!-- Drawn automatically from site settings, publications, hardware, and competitions sections -->
+                <figure class="trace-figure" id="trace">
+                    <div class="trace">
+                        <div class="trace-bar" aria-hidden="true"><span class="file">career.vcd</span><span>1 yr/div</span></div>
+                        <div class="trace-scroll"></div>
+                        <div class="trace-tip" hidden></div>
+                    </div>
+                    <figcaption class="trace-caption">My path so far as a timing diagram: degree stages, each paper, each tapeout, and each round of the AI Hardware Attack Challenge. Hover or tap a pulse for details.</figcaption>
+                </figure>
+
+                <!-- ==================== ABOUT ==================== -->
+                <section class="intro" aria-label="About">
+                    <p class="lede">I study how large language models can make hardware design more accessible, and hardware security more practical.</p>
+                    <p>I am a Ph.D. candidate in Electrical and Computer Engineering at NYU Tandon, advised by Prof. Ramesh Karri. I primarily research digital hardware design and hardware security, with a focus on the implications of generative AI on those fields. In <a href="#pub-blocklove2023chipchat">Chip-Chat</a>, we used GPT-4 to design and write the Verilog for a microprocessor that we then taped out, and a co-processor designed the same way won first place in Efabless's AI-generated silicon design challenge. I also co-founded the <a href="#competition">AI Hardware Attack Challenge</a> at CSAW, where student teams use generative AI to attack open-source hardware. Before my Ph.D., I completed my B.S. and M.S. at the Rochester Institute of Technology and then worked at the Johns Hopkins University Applied Physics Laboratory in hardware design.</p>
+                </section>
+
+
+                <!-- ==================== NEWS ==================== -->
+                <!-- Newest first. Only the latest few show until a visitor clicks "Show all news". -->
+                <!-- <section id="news" class="block"> -->
+                <!--   <h2>News</h2> -->
+                <!--   <ul class="news" id="news-list"> -->
+                <!--     <li><time datetime="2026-10">Oct 2026</time><p>Example news</p></li> -->
+                <!--   </ul> -->
+                <!-- </section> -->
+
+
+                <!-- ==================== RESEARCH ==================== -->
+                <section id="research" class="block">
+                    <h2>Research</h2>
+
+                    <!-- Dissertation. <span class="hl"> wrapper highlights it -->
+                    <p class="diss-title"><span class="hl">The Implications of Generative AI for Hardware Design and Security</span></p>
+                    <p class="diss-meta">Ph.D. dissertation, advised by Prof. Ramesh Karri. Advanced to candidacy August 2026; expected defense by May 2027.</p>
+
+                    <!-- Main research areas. data-cite bibtex keys give links to papers -->
+                    <article class="thrust">
+                        <h3>LLMs for hardware design</h3>
+                        <p>In Chip-Chat, a hardware engineer and GPT-4 co-designed an 8-bit microprocessor through conversation, and the design went to tapeout. Since then I've worked on closing that loop automatically by feeding EDA tool output back to the model, and on measuring where LLMs help and where they fall short in hardware design and test. My recent focus in this area has been on more efficiently using LLMs in the hardware design flow.</p>
+                        <p class="thrust-papers">Papers: <span data-cite="blocklove2023chipchat, blocklove2025todaes, blocklove2024lad"></span></p>
+                    </article>
+
+                    <article class="thrust">
+                        <h3>LLMs implications in hardware security</h3>
+                        <p>If LLMs can help design hardware, they can help attack it. Through the AI Hardware Attack Challenge, I study how teams use generative AI to plant Trojans and exploitable bugs in real open-source designs, and what that means for verification tools and model safeguards. Other ongoing works focus on using LLMs for security analysis of industry-scale designs.</p>
+                        <p class="thrust-papers">Papers: <span data-cite="blocklove2025lowering"></span></p>
+                    </article>
+
+                    <article class="thrust">
+                        <h3>Securing additive manufacturing</h3>
+                        <p>A 3D printer's control system is a hardware attack surface too. OffRAMPS is an FPGA-based intermediary that lets us observe and modify a printer's control signals to study attacks and defenses, and SCREAM analyzes secure channels for evaluating prints in real time.</p>
+                        <p class="thrust-papers">Papers: <span data-cite="blocklove2024offramps, basuroy2026scream"></span></p>
+                    </article>
+
+                    <!-- Talk video (probably the Zero to ASIC interview?) data-youtube is for the youtube ID -->
+                    <!--   <figure class="talk"> -->
+                    <!--     <div class="video" data-youtube="" data-title="Secure by construction: research overview"></div> -->
+                    <!--     <figcaption>Secure by construction: research overview. Halden ECE Seminar, September 2026, 25 minutes.</figcaption> -->
+                    <!--   </figure> -->
+                </section>
+
+
+                    <!-- ==================== PUBLICATIONS ==================== -->
+                    <!-- Built automatically from BibTeX at data/publications.bib-->
+                    <section id="publications" class="block">
+                        <h2>Publications</h2>
+                        <div class="scholar" id="scholar-panel" hidden></div>
+                        <div class="pub-filters" id="pub-filters" role="group" aria-label="Filter publications" hidden></div>
+                        <p class="pub-legend" id="pub-legend" hidden></p>
+                        <p class="visually-hidden" id="pub-status" role="status"></p>
+                        <ol class="pubs" id="pub-list"></ol>
+                        <noscript><p>The publication list needs JavaScript. My full list is in my <a href="files/cv.pdf">CV</a>.</p></noscript>
+                    </section>
+
+
+                    <!-- ==================== CODE AND HARDWARE ==================== -->
+                    <!-- The repository list fills itself from GitHub, controlled in the settings block at the top -->
+                    <section id="code" class="block">
+                        <h2>Code and hardware</h2>
+                        <p class="gh-head" id="gh-head"></p>
+                        <ul class="repos" id="gh-repos"></ul>
+                        <p class="gh-note" id="gh-note" hidden></p>
+
+                        <!-- Developed hardware -->
+                        <h3 class="sub">Hardware</h3>
+                        <ul class="projects">
+                            <!-- data-tapeout="YYYY-MM" adds a pulse to the waveform -->
+                            <li id="tapeout-chipchat-structuredeval" data-tapeout="2023-05">
+                                <h3 class="project-name">TT3: Chip-Chat 8-bit microprocessor & Structured Design Becnhmarks</h3>
+                                <p>An accumulator-based microprocessor co-designed in conversation with GPT-4, which wrote its Verilog. A set of benchmarking circuits developed by GPT-4 using tool-based feedback. Sent to tapeout on a SkyWater 130&nbsp;nm shuttle in 2023.</p>
+                                <p class="project-meta"><span>Papers: <span data-cite="blocklove2023chipchat, blocklove2024lad"></span></span></p>
+                            </li>
+                            <li id="tapeout-qtcore-c1" data-tapeout="2023-06">
+                                <h3 class="project-name">QTCore-C1 co-processor</h3>
+                                <p>A co-processor for predictable-timing I/O state machines, designed with the Chip-Chat method. It won first place in Efabless's AI Generated Open-Source Silicon Design Challenge and was fabricated on a chipIgnite shuttle.</p>
+                                <p class="project-meta"><span>First place, Efabless AI design challenge, 2023</span></p>
+                            </li>
+                            <li id="pcb-offramps">
+                                <h3 class="project-name">NYU OffRAMPS PCB</h3>
+                                <p>An FPGA-based intermediary for evaluating hardware attacks and defenses on FFF 3D printers. It was used to both replicate existing 3D-printer hardware Trojans and detect bootloader Trojans proposed in Hack3D.</p>
+                                <p class="project-meta"><span>Paper: <span data-cite="blocklove2024offramps"></span></span></p>
+                            </li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== COMPETITION ==================== -->
+                    <section id="competition" class="block">
+                        <h2>AI Hardware Attack Challenge</h2>
+                        <p class="comp-role">Co-founder (with Hammond Pearce) and global lead, <span data-comp="first">2023</span>–present</p>
+                        <p class="comp-about">A competition at CSAW, NYU's student-run cybersecurity event, and recent additional conferences, in which student teams use generative AI to insert hardware Trojans and other exploitable vulnerabilities into open-source designs such as OpenTitan, RISC-V processors, and cryptographic accelerators. Teams work through a series of remote challenges, and finalists advance to a final round in person.</p>
+                        <p class="comp-summary"><span data-comp="editions" data-cap>Six</span> editions since <span data-comp="first">2023</span>, with <span data-comp="teams">82</span> teams in total.</p>
+
+                        <ul class="comp-did">
+                            <li>Publish each year's challenge designs and materials on GitHub.</li>
+                            <li>Supports open-source hardware and software through use of open-source tooling, targets, and requirements that competing teams keep their submissions open and accessible.</li>
+                            <li>Analyzed what teams built in <span data-cite="blocklove2025lowering"></span>: two undergraduate teams with little chip design or security background produced vulnerabilities rated medium to high severity.</li>
+                        </ul>
+
+                        <table class="editions" id="editions">
+                            <caption>Editions</caption>
+                            <thead><tr><th scope="col">Year</th><th scope="col">Challenge</th><th scope="col">Teams</th></tr></thead>
+                            <tbody>
+                                <tr data-teams="14" data-url="https://csaw.io/competition/ai-hardware-attack-challenge" data-when="2026-09-18/2026-10-03" data-venue="Remote qualifier phase for NYU CSAW 2026" data-current>
+                                    <td class="yr">2026</td><td class="ch">AI Hardware Attack Challenge</td><td class="teams"></td></tr>
+                                <tr data-teams="12" data-url="https://github.com/JBlocklove/DAC-AHA-Challenge-2026" data-when="2026-05-23/2026-07-26" data-venue="Co-located with GREAT Workshop @ DAC 2026">
+                                    <td class="yr">2026</td><td class="ch">AI Hardware Attack Challenge @ DAC</td><td class="teams"></td></tr>
+                                <tr data-teams="23" data-url="https://github.com/JBlocklove/HOST_AHA_Challenge_2026" data-when="2026-04-12/2026-05-06" data-venue="Co-located with IEEE HOST 2026">
+                                    <td class="yr">2026</td><td class="ch">HOST Hardware Hacking Competition -- Red & Blue Team</td><td class="teams"></td></tr>
+                                <tr data-teams="10" data-url="https://csaw.io/competition/ai-hardware-attack-challenge" data-when="2025-07-10/2025-11-07" data-venue="AI Hardware Attack Challenge @ NYU CSAW 2025">
+                                    <td class="yr">2025</td><td class="ch">AI Hardware Attack Challenge</td><td class="teams"></td></tr>
+                                <tr data-teams="8" data-url="https://csaw.io/competition/ai-hardware-attack-challenge" data-when="2024-09-15/2024-11-09" data-venue="AI Hardware Attack Challenge @ NYU CSAW 2024">
+                                    <td class="yr">2024</td><td class="ch">AI Hardware Attack Challenge</td><td class="teams"></td></tr>
+                                <tr data-teams="14" data-url="https://csaw.io/competition/ai-hardware-attack-challenge" data-when="2023-09-15/2023-11-11" data-venue="AI Hardware Attack Challenge @ NYU CSAW 2023">
+                                    <td class="yr">2023</td><td class="ch">AI Hardware Attack Challenge</td><td class="teams"></td></tr>
+                            </tbody>
+                        </table>
+
+                        <ul class="links">
+                            <li><a href="https://www.csaw.io/ai-hardware-attack-challenge">Current CSAW challenge page</a></li>
+                            <!-- <li><a href="https://github.com/JBlocklove/CSAW-AI-Hardware-Attack-Challenge-2025">2025 challenge on GitHub</a></li> -->
+                            <li><a href="https://doi.org/10.1109/MSEC.2025.3600140">Lowering the Bar (IEEE Security &amp; Privacy, 2025)</a></li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== TEACHING AND MENTORING ==================== -->
+                    <section id="teaching" class="block">
+                        <h2>Teaching and mentoring</h2>
+                        <ul class="rows">
+                            <li>
+                                <div><a href="https://github.com/JBlocklove/LLMs-for-EDA-Tutorial">Tutorials: LLMs for EDA</a>
+                                    <span class="row-sub">Tutorials at DATE 2024 and the IEEE Test Spring School 2024, and a short course at BCICTS 2026. Hands-on materials on GitHub.</span>
+                                </div>
+                                <span class="row-date">2024–2026</span>
+                            </li>
+                            <li>
+                                <div>Instructor of record, Introduction to Hardware Security (ECE 9453)
+                                    <span class="row-sub">Graduate special topics course, 15 students</span>
+                                </div>
+                                <span class="row-date">Spring 2024</span>
+                            </li>
+                            <li>
+                                <div>Teaching assistant, NYU
+                                    <span class="row-sub">Advanced Hardware Design; Digital Logic and State Machine Design; CE Design Projects. September 2022 to December 2023, Fall 2024, and Fall 2026 to present.</span>
+                                </div>
+                                <span class="row-date">2022–present</span>
+                            </li>
+                            <li>
+                                <div>Laboratory instructor, Digital System Design II
+                                    <span class="row-sub">Rochester Institute of Technology</span>
+                                </div>
+                                <span class="row-date">2019–2020</span>
+                            </li>
+                            <li>
+                                <div>Curriculum development assistant, Digital System Design II
+                                    <span class="row-sub">Rochester Institute of Technology. Developed new labs for the full course to match a new curriculum built around designing a MIPS processor from scratch in VHDL, and added lab exercises on crossing clock domains.</span>
+                                </div>
+                                <span class="row-date">2017, 2018</span>
+                            </li>
+                            <li>
+                                <div>Teaching assistant, Rochester Institute of Technology
+                                    <span class="row-sub">Graduate: Hardware and Software Design for Cryptographic Applications; Reconfigurable Computer</span>
+                                    <span class="row-sub">Undergraduate: Interface and Digital Electronics; Digital System Design I and II</span>
+                                </div>
+                                <span class="row-date">2016–2020</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="sub">Students mentored</h3>
+                        <ul class="rows">
+                            <li>
+                                <div>Siddh Javeri, M.S. in Computer Engineering, NYU
+                                    <span class="row-sub">Summer research through the TREx program</span>
+                                </div>
+                                <span class="row-date">2026</span>
+                            </li>
+                            <li>
+                                <div>Thinh Nguyen, M.S. in Computer Engineering, NYU
+                                    <span class="row-sub">Summer research through the TREx program</span>
+                                </div>
+                                <span class="row-date">2026</span>
+                            </li>
+                            <li>
+                                <div>Kahlia Gronthos, M.S. in Computer Engineering, NYU
+                                    <span class="row-sub">M.S. capstone project</span>
+                                </div>
+                                <span class="row-date">2025</span>
+                            </li>
+                            <li>
+                                <div>Youssof Saleh, B.S. in Computer Engineering
+                                    <span class="row-sub">NYU UGSRP summer research internship</span>
+                                </div>
+                                <span class="row-date">2025</span>
+                            </li>
+                            <li>
+                                <div>Helin Mazi, B.S. in Computer Engineering
+                                    <span class="row-sub">NYU UGSRP summer research internship</span>
+                                </div>
+                                <span class="row-date">2025</span>
+                            </li>
+                            <li>
+                                <div>Fatima Farooq, B.S. in Computer Engineering
+                                    <span class="row-sub">NYU UGSRP summer research internship</span>
+                                </div>
+                                <span class="row-date">2024</span>
+                            </li>
+                            <li>
+                                <div>Abay Oralov, B.S. in Computer Engineering
+                                    <span class="row-sub">NYU UGSRP summer research internship</span>
+                                </div>
+                                <span class="row-date">2024</span>
+                            </li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== AWARDS AND FELLOWSHIPS ==================== -->
+                    <!-- <section id="awards" class="block"> -->
+                    <!--   <h2>Awards and fellowships</h2> -->
+                    <!--   <ul class="rows"> -->
+                    <!--     <li> -->
+                    <!--       <div>First place, AI Generated Open-Source Silicon Design Challenge -->
+                    <!--         <span class="row-sub">Efabless, for the QTCore-C1 co-processor (with Hammond Pearce, Siddharth Garg, and Ramesh Karri)</span> -->
+                    <!--       </div> -->
+                    <!--       <span class="row-date">2023</span> -->
+                    <!--     </li> -->
+                    <!--   </ul> -->
+                    <!-- </section> -->
+
+
+                    <!-- ==================== TALKS AND TUTORIALS ==================== -->
+                    <section id="talks" class="block">
+                        <h2>Talks and tutorials</h2>
+                        <ul class="rows">
+                            <li>
+                                <div>Generative AI for Digital Hardware Design: Conversation Through Automation
+                                    <span class="row-sub">Short course, IEEE BiCMOS and Compound Semiconductor Integrated Circuits and Technology Symposium (BCICTS)</span>
+                                </div>
+                                <span class="row-date">Oct 2026</span>
+                            </li>
+                            <li>
+                                <div>AI Hardware Attack Challenge
+                                    <span class="row-sub">GREAT Workshop, IEEE/ACM Design Automation Conference (DAC)</span>
+                                </div>
+                                <span class="row-date">Jul 2026</span>
+                            </li>
+                            <li>
+                                <div><a href="#pub-xu2025socc">Large Language Models (LLMs) for Electronic Design Automation</a>
+                                    <span class="row-sub">Invited special session, IEEE International System-on-Chip Conference (SOCC)</span>
+                                </div>
+                                <span class="row-date">2025</span>
+                            </li>
+                            <li>
+                                <div><a href="#pub-jha2025ets">Large Language Models (LLMs) for Verification, Testing, and Design</a>
+                                    <span class="row-sub">Invited special session, IEEE European Test Symposium (ETS)</span>
+                                </div>
+                                <span class="row-date">May 2025</span>
+                            </li>
+                            <li>
+                                <div>Automating Hardware Design with Large Language Models
+                                    <span class="row-sub">IEEE Embedded Systems Week (ESWEEK)</span>
+                                </div>
+                                <span class="row-date">Sep 2024</span>
+                            </li>
+                            <li>
+                                <div>Automating Hardware Design with Large Language Models
+                                    <span class="row-sub">Microelectronics Packaging &amp; Test Engineering Council (MEPTEC)</span>
+                                </div>
+                                <span class="row-date">Jun 2024</span>
+                            </li>
+                            <li>
+                                <div>Automating Hardware Design with Large Language Models: Feedback Loops for Security
+                                    <span class="row-sub">Tutorial, IEEE Test Spring School (TSS)</span>
+                                </div>
+                                <span class="row-date">May 2024</span>
+                            </li>
+                            <li>
+                                <div>Automating Hardware Design with Large Language Models
+                                    <span class="row-sub">Tutorial, IEEE Design, Automation and Test in Europe (DATE)</span>
+                                </div>
+                                <span class="row-date">Mar 2024</span>
+                            </li>
+                            <li>
+                                <div>The Intersection of Hardware, Security, and Large Language Models
+                                    <span class="row-sub">Tutorial, ACM/IEEE Workshop on Machine Learning for CAD (MLCAD)</span>
+                                </div>
+                                <span class="row-date">Sep 2023</span>
+                            </li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== IN THE PRESS ==================== -->
+                    <section id="press" class="block">
+                        <h2>In the press</h2>
+                        <ul class="rows">
+                            <li>
+                                <div><a href="https://engineering.nyu.edu/news/ai-tools-can-help-hackers-plant-hidden-flaws-computer-chips-study-finds">AI tools can help hackers plant hidden flaws in computer chips, study finds</a>
+                                    <span class="row-sub">NYU Tandon, on "Lowering the Bar"</span></div>
+                                <span class="row-date">Oct 2025</span>
+                            </li>
+                            <li>
+                                <div><a href="https://cyber.nyu.edu/2024/07/22/chipchat-nyu-tandon-team-fabricates-the-worlds-first-chip-designed-through-ai-conversations">ChipChat: NYU Tandon team fabricates the world's first chip designed through AI conversations</a>
+                                    <span class="row-sub">NYU Center for Cybersecurity</span></div>
+                                <span class="row-date">Jul 2024</span>
+                            </li>
+                            <li>
+                                <div><a href="https://engineering.nyu.edu/news/chip-chat-chip-hand-nyu-tandon-researchers-fabricate-worlds-first-chip-designed-through">From “Chip Chat” to “Chip In Hand”: NYU Tandon researchers fabricate the world’s first chip designed through conversations with an artificial-intelligence platform</a>
+                                    <span class="row-sub">NYU Tandon School of Engineering</span>
+                                </div>
+                                <span class="row-date">Jan 2024</span>
+                            </li>
+                            <li>
+                                <div><a href="https://www.tomshardware.com/news/conversation-with-chatgpt-was-enough-to-develop-part-of-a-cpu">Conversation With ChatGPT Was Enough to Develop Part of a CPU</a>
+                                    <span class="row-sub">Tom’s Hardware, on Chip-Chat</span>
+                                </div>
+                                <span class="row-date">Jun 2023</span>
+                            </li>
+                            <li>
+                                <div><a href="https://techxplore.com/news/2023-06-conversations-ai-microprocessing-chips.html">Conversations with AI models can help create microprocessing chips</a>
+                                    <span class="row-sub">TechXplore, on Chip-Chat</span></div>
+                                <span class="row-date">Jun 2023</span>
+                            </li>
+                            <li>
+                                <div><a href="https://www.design-reuse.com/news/54226/efabless-ai-generated-silicon-design-challenge.html">Efabless reveals winners of AI-generated silicon design challenge</a>
+                                    <span class="row-sub">Design &amp; Reuse</span></div>
+                                <span class="row-date">Jun 2023</span>
+                            </li>
+                            <li>
+                                <div><a href="https://www.youtube.com/watch?v=6vC3t_soJok">First chip designed with AI! An interview with Dr. Hammond Pearce and Jason Blocklove</a>
+                                    <span class="row-sub">Interview, Zero to ASIC Course (video)</span>
+                                </div>
+                                <span class="row-date">Jun 2023</span>
+                            </li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== SERVICE ==================== -->
+                    <section id="service" class="block">
+                        <h2>Service</h2>
+                        <ul class="rows">
+                            <li>
+                                <div>Reviewer
+                                    <span class="row-sub">Journals: JSA, ACM TECS, IEEE Computer, IEEE TIFS, ACM TODAES, Journal of Hardware and Systems Security</span>
+                                    <span class="row-sub">Conferences: ICCAD, ITC, DSN, CASES, DATE, ETS, DAC</span>
+                                </div>
+                                <span class="row-date"></span>
+                            </li>
+                            <!-- Separate sub-reviews from direct invitations, move the venues reviewed on behalf of a professor (program committee member or editor) from the row above into the row below. Not sure I want to make this distinction. -->
+                            <!--
+                            <li>
+                                <div>Sub-reviewer
+                                    <span class="row-sub">Journals: </span>
+                                    <span class="row-sub">Conferences: </span>
+                                </div>
+                                <span class="row-date"></span>
+                            </li>
+                            -->
+                            <li>
+                                <div>Competition organizer
+                                    <span class="row-sub"><a href="#competition">AI Hardware Attack Challenge</a> at CSAW, organizer and judge (2023–2025)</span>
+                                    <span class="row-sub">IEEE HOST, organizer (2026); IEEE DAC, organizer and judge (2026)</span>
+                                </div>
+                                <span class="row-date">2023–2026</span>
+                            </li>
+                            <li>
+                                <div>Li-Ion Battery Powered Micromobility Device Policy Committee
+                                    <span class="row-sub">New York University</span>
+                                </div>
+                                <span class="row-date">2025</span>
+                            </li>
+                        </ul>
+                    </section>
+
+
+                    <!-- ==================== REFERENCES ==================== -->
+                    <!-- Ask your letter writers before posting their contact details. -->
+                    <section id="references" class="block">
+                        <h2>References</h2>
+                        <ul class="refs">
+                            <li>
+                                <p class="ref-name">Ramesh Karri (advisor)</p>
+                                <p class="ref-role">Professor of Electrical and Computer Engineering<br>New York University</p>
+                                <a href="mailto:rkarri@nyu.edu">rkarri@nyu.edu</a>
+                            </li>
+                            <li>
+                                <p class="ref-name">Hammond Pearce</p>
+                                <p class="ref-role">Senior Lecturer (Assistant Professor) of Computer Science and Engineering<br>University of New South Wales</p>
+                                <a href="mailto:hammond.pearce@unsw.edu.au">hammond.pearce@unsw.edu.au</a>
+                            </li>
+                            <li>
+                                <p class="ref-name">Benjamin Tan</p>
+                                <p class="ref-role">Associate Professor of Electrical and Software Engineering<br>University of Calgary</p>
+                                <a href="mailto:benjamin.tan1@ucalgary.ca">benjamin.tan1@ucalgary.ca</a>
+                            </li>
+                            <li>
+                                <p class="ref-name">Siddharth Garg</p>
+                                <p class="ref-role">Professor of Electrical and Computer Engineering<br>New York University</p>
+                                <a href="mailto:siddharth.garg@nyu.edu">siddharth.garg@nyu.edu</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <footer class="site-footer">
+                        <p>Last updated October 2026.</p>
+                    </footer>
+
+            </main>
+        </div>
+
+    </body>
+</html>
