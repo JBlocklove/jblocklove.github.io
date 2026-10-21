@@ -926,7 +926,7 @@
         var lastEnd = Math.max.apply(null, ends);
         var t1 = Math.ceil(lastEnd + (cfg.next ? 0.9 : 0.2));
 
-        var rows = [{ name: "stage", type: "bus" }];
+        var rows = [{ name: "career", type: "bus" }];
         if (papers.length) rows.push({ name: "papers", type: "papers" });
         if (tapeouts.length) rows.push({ name: cfg.tapeout || "tapeout", type: "tapeout" });
         if (comps.length) rows.push({ name: cfg.competition, type: "comp" });
