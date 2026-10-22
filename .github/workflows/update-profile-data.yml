@@ -6,7 +6,7 @@ name: Update Scholar and GitHub data
 
 on:
   schedule:
-    - cron: "30 6 * * 1"   # Mondays, 06:30 UTC
+    - cron: "23 7 * * 1"   # Mondays, 07:23 UTC
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,10 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Fetch Google Scholar numbers
+        env:
+          # Optional. Google Scholar usually blocks GitHub's servers; with a free
+          # SerpApi key saved as a repository secret, the script goes through SerpApi.
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
         run: python scripts/update_scholar.py
 
       - name: Fetch pinned GitHub repositories
