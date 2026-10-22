@@ -1,6 +1,6 @@
 // Written by scripts/update_scholar.py. You can also edit these numbers by hand.
 window.SCHOLAR_DATA = {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "name": "Jason Blocklove",
   "profile": "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
   "citations": 805,
@@ -88,13 +88,13 @@ window.SCHOLAR_DATA = {
     },
     {
       "title": "2024 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)| 979-8-3503-4105-8/24/$31.00© 2024 IEEE| DOI: 10.1109/DSN58291. 2024.00058",
-      "year": 0,
+      "year": null,
       "citations": 0,
       "id": "QOd5mRIAAAAJ:W7OEmFMy1HYC"
     },
     {
       "title": "Research Track Reviewers",
-      "year": 0,
+      "year": null,
       "citations": 0,
       "id": "QOd5mRIAAAAJ:Y0pCki6q_DkC"
     }
