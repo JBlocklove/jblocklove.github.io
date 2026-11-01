@@ -6,7 +6,7 @@ name: Update Scholar and GitHub data
 
 on:
   schedule:
-    - cron: "23 7 * * 1"   # Mondays, 07:23 UTC
+    - cron: "00 7 * * *"   # 7:00 every day
   workflow_dispatch:
 
 permissions:
