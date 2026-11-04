@@ -252,9 +252,9 @@
     /* Publication model                                                   */
     /* ------------------------------------------------------------------ */
     var KIND_LABEL = { conference: "Conference", journal: "Journal", workshop: "Workshop", invited: "Invited",
-        preprint: "Preprint", thesis: "Thesis", patent: "Patent", other: "Other" };
+        preprint: "Preprint", thesis: "Thesis", patent: "Patent", book: "Book", other: "Other" };
     var FILTER_LABEL = { conference: "Conference", journal: "Journal", workshop: "Workshop", invited: "Invited",
-        preprint: "Preprints", thesis: "Theses", patent: "Patents", other: "Other" };
+        preprint: "Preprints", thesis: "Theses", patent: "Patents", book: "Book", other: "Other" };
     var WEBSITE_FIELDS = ["abbr", "kind", "selected", "award", "pdf", "code", "dataset", "slides",
         "video", "poster", "artifacts", "equal", "mentees", "scholar", "abstract", "arxiv"];
 
@@ -272,6 +272,7 @@
             case "phdthesis": case "mastersthesis": return "thesis";
             case "patent": return "patent";
             case "misc": case "unpublished": case "techreport": return "preprint";
+            case "book": return "book";
             default: return "other";
         }
     }
