@@ -1,6 +1,6 @@
 // Written by scripts/update_scholar.py. You can also edit these numbers by hand.
 window.SCHOLAR_DATA = {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "name": "Jason Blocklove",
   "profile": "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
   "citations": 842,
