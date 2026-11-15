@@ -1,6 +1,6 @@
 // Written by scripts/update_github.py. You can also edit it by hand.
 window.GITHUB_DATA = {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "user": "JBlocklove",
   "source": "pinned",
   "public_repos": 46,
