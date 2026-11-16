@@ -1,35 +1,35 @@
 // Written by scripts/update_scholar.py. You can also edit these numbers by hand.
 window.SCHOLAR_DATA = {
-  "updated": "2026-11-10",
+  "updated": "2026-11-16",
   "name": "Jason Blocklove",
   "profile": "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
-  "citations": 842,
-  "citations_recent": 840,
+  "citations": 855,
+  "citations_recent": 853,
   "h_index": 7,
   "i10_index": 6,
   "cites_per_year": {
     "2023": 20,
     "2024": 167,
-    "2025": 314,
-    "2026": 335
+    "2025": 308,
+    "2026": 354
   },
   "publications": [
     {
       "title": "Chip-chat: Challenges and opportunities in conversational hardware design",
       "year": 2023,
-      "citations": 429,
+      "citations": 435,
       "id": "QOd5mRIAAAAJ:u-x6o8ySG0sC"
     },
     {
       "title": "Autochip: Automating hdl generation using llm feedback",
       "year": 2023,
-      "citations": 250,
+      "citations": 252,
       "id": "QOd5mRIAAAAJ:UeHWp8X0CEIC"
     },
     {
       "title": "Automatically improving llm-based verilog generation using eda tool feedback",
       "year": 2025,
-      "citations": 50,
+      "citations": 52,
       "id": "QOd5mRIAAAAJ:eQOLeE2rZwMC"
     },
     {
@@ -41,13 +41,13 @@ window.SCHOLAR_DATA = {
     {
       "title": "Large language models (LLMs) for electronic design automation (EDA): Special session paper",
       "year": 2025,
-      "citations": 27,
+      "citations": 29,
       "id": "QOd5mRIAAAAJ:LkGwnXOMwfcC"
     },
     {
       "title": "Large language models (LLMs) for verification, testing, and design",
       "year": 2025,
-      "citations": 19,
+      "citations": 20,
       "id": "QOd5mRIAAAAJ:WF5omc3nYNoC"
     },
     {
