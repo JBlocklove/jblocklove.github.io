@@ -1,23 +1,23 @@
 // Written by scripts/update_scholar.py. You can also edit these numbers by hand.
 window.SCHOLAR_DATA = {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "name": "Jason Blocklove",
   "profile": "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
-  "citations": 855,
-  "citations_recent": 853,
+  "citations": 858,
+  "citations_recent": 856,
   "h_index": 7,
   "i10_index": 6,
   "cites_per_year": {
     "2023": 20,
     "2024": 167,
     "2025": 308,
-    "2026": 354
+    "2026": 357
   },
   "publications": [
     {
       "title": "Chip-chat: Challenges and opportunities in conversational hardware design",
       "year": 2023,
-      "citations": 435,
+      "citations": 438,
       "id": "QOd5mRIAAAAJ:u-x6o8ySG0sC"
     },
     {
