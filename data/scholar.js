@@ -1,29 +1,29 @@
 // Written by scripts/update_scholar.py. You can also edit these numbers by hand.
 window.SCHOLAR_DATA = {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "name": "Jason Blocklove",
   "profile": "https://scholar.google.com/citations?user=QOd5mRIAAAAJ",
-  "citations": 867,
-  "citations_recent": 865,
+  "citations": 875,
+  "citations_recent": 873,
   "h_index": 7,
   "i10_index": 6,
   "cites_per_year": {
     "2023": 20,
     "2024": 167,
     "2025": 308,
-    "2026": 366
+    "2026": 374
   },
   "publications": [
     {
       "title": "Chip-chat: Challenges and opportunities in conversational hardware design",
       "year": 2023,
-      "citations": 442,
+      "citations": 447,
       "id": "QOd5mRIAAAAJ:u-x6o8ySG0sC"
     },
     {
       "title": "Autochip: Automating hdl generation using llm feedback",
       "year": 2023,
-      "citations": 255,
+      "citations": 257,
       "id": "QOd5mRIAAAAJ:UeHWp8X0CEIC"
     },
     {
@@ -47,7 +47,7 @@ window.SCHOLAR_DATA = {
     {
       "title": "Large language models (LLMs) for verification, testing, and design",
       "year": 2025,
-      "citations": 20,
+      "citations": 21,
       "id": "QOd5mRIAAAAJ:WF5omc3nYNoC"
     },
     {
